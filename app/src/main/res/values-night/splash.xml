@@ -3,7 +3,7 @@
 
     <!--Splash Screen API-->
     <style name="Theme.App.CustomSplashScreenTheme" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#020236</item>
+        <item name="windowSplashScreenBackground">#343a40</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/biosec_logo_dark_mode</item>
         <item name="postSplashScreenTheme">@style/Theme.Biosec</item>
     </style>

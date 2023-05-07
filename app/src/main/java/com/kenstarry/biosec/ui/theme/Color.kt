@@ -10,4 +10,5 @@ val Blue_Light_100 = Color(0xffcaf0f8)
 val Pink = Color(0xfff72585)
 
 val black = Color(0xff000000)
+val Bg_Dark = Color(0xff343a40)
 val white = Color(0xffffffff)

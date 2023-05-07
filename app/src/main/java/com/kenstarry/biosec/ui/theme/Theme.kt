@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.kenstarry.biosec.ui.custom.LocalSpacing
 import com.kenstarry.biosec.ui.custom.Spacing
 
@@ -22,7 +23,7 @@ private val DarkColorScheme = darkColorScheme(
     primary = Blue_Light_200,
     secondary = Blue_Light_300,
     tertiary = Pink,
-    onPrimary = Blue_Light_500
+    onPrimary = Bg_Dark
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -58,12 +59,22 @@ fun BiosecTheme(
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
+
+    val systemUiController = rememberSystemUiController()
     val view = LocalView.current
+
     if (!view.isInEditMode) {
         SideEffect {
-            val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+
+            systemUiController.setStatusBarColor(
+                color = colorScheme.onPrimary,
+                darkIcons = !darkTheme
+            )
+
+            systemUiController.setNavigationBarColor(
+                color = colorScheme.onPrimary,
+                darkIcons = !darkTheme
+            )
         }
     }
 
