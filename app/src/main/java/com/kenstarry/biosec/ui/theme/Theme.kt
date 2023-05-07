@@ -19,15 +19,17 @@ import com.kenstarry.biosec.ui.custom.LocalSpacing
 import com.kenstarry.biosec.ui.custom.Spacing
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = Blue_Light_200,
+    secondary = Blue_Light_300,
+    tertiary = Pink,
+    onPrimary = Blue_Light_500
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = Blue_Light_200,
+    secondary = Blue_Light_300,
+    tertiary = Pink,
+    onPrimary = white
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),

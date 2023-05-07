@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Splash Screen API-->
+    <style name="Theme.App.CustomSplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#ffffff</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/biosec_logo_light_theme</item>
+        <item name="postSplashScreenTheme">@style/Theme.Biosec</item>
+    </style>
+
+</resources>
