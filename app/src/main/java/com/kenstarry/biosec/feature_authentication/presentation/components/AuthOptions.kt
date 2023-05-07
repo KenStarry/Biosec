@@ -2,6 +2,7 @@ package com.kenstarry.biosec.feature_authentication.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -26,7 +27,7 @@ fun AuthOptions() {
             }
         },
         modifier = Modifier
-            .fillMaxSize(),
+            .wrapContentHeight(),
         verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.medium),
         horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.medium)
     )
