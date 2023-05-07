@@ -3,8 +3,8 @@ package com.kenstarry.biosec.navigation
 object NavConstants {
 
     const val ROOT_ROUTE = "root"
-    const val AUTH_ROUTE = "authentication"
-    const val HOME_ROUTE = "authentication"
+    const val AUTH_ROUTE = "authentication root"
+    const val HOME_ROUTE = "home root"
 
     //  screen routes
     const val MAIN_SCREEN_ROUTE = "main screen route"
