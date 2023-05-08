@@ -28,15 +28,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.kenstarry.biosec.feature_authentication.presentation.components.AuthOptions
+import com.kenstarry.biosec.feature_authentication.presentation.viewmodel.AuthViewModel
 import com.kenstarry.biosec.ui.custom.spacing
 
 @Composable
 fun AuthenticationScreen(
     mainNavHostController: NavHostController
 ) {
+
+    val authVM: AuthViewModel = viewModel()
 
     Column(
         modifier = Modifier
@@ -75,7 +79,9 @@ fun AuthenticationScreen(
 
         }
 
-        AuthOptions()
+        AuthOptions(
+            authVM = authVM
+        )
 
         //  next button
         Box(

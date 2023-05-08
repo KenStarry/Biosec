@@ -1,6 +1,7 @@
 package com.kenstarry.biosec.feature_authentication.presentation.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.kenstarry.biosec.R
 import com.kenstarry.biosec.core.presentation.components.MyLottie
@@ -26,13 +28,16 @@ import com.kenstarry.biosec.ui.custom.spacing
 @Composable
 fun AuthOptionCard(
     title: String,
-    rawFile: Int
+    rawFile: Int,
+    lottieSize: Dp,
+    onCardClicked: () -> Unit
 ) {
 
     Card(
         modifier = Modifier
             .wrapContentHeight()
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .clickable { onCardClicked() },
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
@@ -53,7 +58,7 @@ fun AuthOptionCard(
                 iterations = 1,
                 isPlaying = true,
                 modifier = Modifier
-                    .size(100.dp)
+                    .size(lottieSize)
             )
 
             //  text
@@ -74,6 +79,8 @@ fun AuthOptionCard(
 fun AuthOptionCardPrev() {
     AuthOptionCard(
         "Fingerprint",
-        R.raw.padlock
+        R.raw.padlock,
+        100.dp,
+        onCardClicked = {}
     )
 }
